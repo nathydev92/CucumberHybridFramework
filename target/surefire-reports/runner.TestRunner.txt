@@ -1,0 +1,23 @@
+-------------------------------------------------------------------------------
+Test set: runner.TestRunner
+-------------------------------------------------------------------------------
+Tests run: 14, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 196.283 s <<< FAILURE! - in runner.TestRunner
+Login with invalid email and valid password(Login functionality)  Time elapsed: 10.092 s  <<< ERROR!
+io.cucumber.core.runner.AmbiguousStepDefinitionsException: 
+"User has entered valid password "password" into password field" matches more than one step definition:
+  "User has entered valid password {string} into password field" in stepdefinitions.Login.user_has_entered_valid_password_into_password_field(java.lang.String)
+  "^User has entered valid password (.+) into password field$" in stepdefinitions.Login.user_has_entered_valid_password_password_into_password_field(java.lang.String)
+
+User creates an account only with mandatory fields(Registration functionality)  Time elapsed: 14.522 s  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "utils.CommonUtils.getEmailWithTimeStamp()" because "this.commonUtils" is null
+
+User creates an account with all fields(Registration functionality)  Time elapsed: 19.057 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: 
+Navigation timed out after 15000 ms
+Build info: version: '4.22.0', revision: 'c5f3146703*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [bbfa751f-be47-4cfd-9504-ddd2a17dc162, get {url=https://tutorialsninja.com/demo/}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 128.0, moz:accessibilityChecks: false, moz:buildID: 20240704121409, moz:debuggerAddress: 127.0.0.1:8207, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 43460, moz:profile: C:\Users\marce\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:8207/devtool..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: bbfa751f-be47-4cfd-9504-ddd2a17dc162
+
